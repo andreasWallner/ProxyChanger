@@ -1,0 +1,16 @@
+{
+  "title": "ProxyChanger",
+  "name": "proxychanger",
+  "version": "0.0.1",
+  "description": "Allows to switch between system proxy and no proxy",
+  "main": "index.js",
+  "author": "Andreas Wallner",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "proxy"
+  ]
+}
