@@ -1,6 +1,7 @@
 var buttons = require('sdk/ui/button/action');
 var tabs = require('sdk/tabs');
 var pref = require('sdk/preferences/service');
+var sp = require('sdk/simple-prefs')
 var _ = require('sdk/l10n').get;
 var self = require('sdk/self');
 
@@ -44,7 +45,7 @@ var button = buttons.ActionButton({
 		var proxy = pref.get('network.proxy.type');
 		console.log('after get')
 		if(proxy == 0)
-			proxy = 5;
+			proxy = sp.prefs.enabledState * 1;
 		else
 			proxy = 0;
 		console.log('after pref-fetch, got: ' + proxy);
@@ -58,3 +59,9 @@ var button = buttons.ActionButton({
 		console.log('proxy: ' + proxy);
 	}
 });
+
+function onPrefChange(prefName) {
+	console.log('preference ' + prefName + ' changed to ' + sp.prefs[prefName]);
+}
+
+sp.on("", onPrefChange);

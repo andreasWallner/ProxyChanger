@@ -1,8 +1,14 @@
 {
+  "locales" : {
+    "de": {
+      "title": "ProxyChanger",
+      "description": "Bietet einen Button zum umschalten zwischen keinem und System Proxy."
+    }
+  },
   "title": "ProxyChanger",
   "name": "proxychanger",
   "version": "0.0.1",
-  "description": "Allows to switch between system proxy and no proxy",
+  "description": "Allows to switch between system proxy and no proxy via simple button.",
   "main": "index.js",
   "author": "Andreas Wallner",
   "engines": {
@@ -12,5 +18,27 @@
   "license": "MIT",
   "keywords": [
     "proxy"
+  ],
+  "preferences": [
+    {
+      "name": "enabledState",
+      "title": "Enabled State",
+      "type": "radio",
+      "value": "5",
+      "options": [
+        {
+          "value": "5",
+          "label": "System"
+        },
+        {
+          "value": "4",
+          "label": "Auto"
+        },
+        {
+          "value": "1",
+          "label": "Manual"
+        }
+      ]
+    }
   ]
 }
