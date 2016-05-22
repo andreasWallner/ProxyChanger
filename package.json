@@ -7,7 +7,7 @@
   },
   "title": "ProxyChanger",
   "name": "proxychanger",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Allows to switch between no proxy and chosen proxy using a single action button.",
   "main": "index.js",
   "author": "Andreas Wallner",
