@@ -1,9 +1,7 @@
 var buttons = require('sdk/ui/button/action');
-var tabs = require('sdk/tabs');
 var pref = require('sdk/preferences/service');
 var sp = require('sdk/simple-prefs')
 var _ = require('sdk/l10n').get;
-var self = require('sdk/self');
 
 // firefox uses the setting network.proxy.type
 // to distinguish the currently configured proxy
@@ -43,25 +41,15 @@ var button = buttons.ActionButton({
 	badge: getBadge(pref.get('network.proxy.type')),
 	onClick: function(state) {
 		var proxy = pref.get('network.proxy.type');
-		console.log('after get')
 		if(proxy == 0)
 			proxy = sp.prefs.enabledState * 1;
 		else
 			proxy = 0;
-		console.log('after pref-fetch, got: ' + proxy);
 
 		pref.set('network.proxy.type', proxy);
-		console.log('after set');
 		button.state("window", {
 			icon: getIcon(proxy),
 			badge: getBadge(proxy)
 		});
-		console.log('proxy: ' + proxy);
 	}
 });
-
-function onPrefChange(prefName) {
-	console.log('preference ' + prefName + ' changed to ' + sp.prefs[prefName]);
-}
-
-sp.on("", onPrefChange);

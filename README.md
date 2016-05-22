@@ -1,7 +1,4 @@
 #ProxyChanger
-A simple firefox plugin that llows to switch between
-system proxy and no proxy.
-
-#Todo
-- Preference setting to change on-setting (auto/manual/system)
-- Upload to firefox plugin database
+A simple firefox plugin that allows to switch between
+no proxy and an arbitrary proxy setting with a button
+in the action bar.

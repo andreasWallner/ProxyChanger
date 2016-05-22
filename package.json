@@ -2,13 +2,13 @@
   "locales" : {
     "de": {
       "title": "ProxyChanger",
-      "description": "Bietet einen Button zum umschalten zwischen keinem und System Proxy."
+      "description": "Bietet einen Button zum Umschalten zwischen keinem Proxy und ausgewählter Proxy Einstellung."
     }
   },
   "title": "ProxyChanger",
   "name": "proxychanger",
   "version": "0.0.1",
-  "description": "Allows to switch between system proxy and no proxy via simple button.",
+  "description": "Allows to switch between no proxy and chosen proxy using a single action button.",
   "main": "index.js",
   "author": "Andreas Wallner",
   "engines": {
@@ -24,7 +24,7 @@
       "name": "enabledState",
       "title": "Enabled State",
       "type": "radio",
-      "value": "5",
+      "value": 5,
       "options": [
         {
           "value": "5",
